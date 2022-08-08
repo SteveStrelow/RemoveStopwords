@@ -1,0 +1,18 @@
+stopwords = ['a', 'essa', 'em', 'então',  'não', 'tive', 'faz', 'agora', 'algum', 'alguma', 'aquele', 'de', 'deu', 'do', 'e', 'estou', 'esta', 'meu', 'minha', 'que', 'sem', 'talvez', 'todo', 'teve', 'um', 'uma']
+text = ('Faz algum tempo entrei em contato e não tive resposta do meu contato então quero reposta do contato e estou aguardando essa resposta do contato')
+text = text.split()
+print(text)
+frase = []
+for word in text:
+    if word not in stopwords:
+        frase.append(word)
+print(frase)
+import collections
+c = collections.Counter(frase)
+print(c)
+#x = c.most_common(2)
+#print(x)
+final = []
+for k,v in c.most_common(2):
+        final.append(k)
+print(final)
